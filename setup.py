@@ -29,6 +29,5 @@ setup(
         'Programming Language :: Python',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
-    
      install_requires=['django-tastypie>=0.9.11'],
 )
