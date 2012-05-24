@@ -18,7 +18,7 @@ def fullsplit(path, result=None):
  
 package_dir = "osqa-context"
  
-packages = []
+packages = find_packages('src')
 for dirpath, dirnames, filenames in os.walk(package_dir):
     # ignore dirnames that start with '.'
     for i, dirname in enumerate(dirnames):
@@ -28,13 +28,14 @@ for dirpath, dirnames, filenames in os.walk(package_dir):
         packages.append(".".join(fullsplit(dirpath)))
  
 setup(
-    name='django-tastypie-two-legged-oauth',
+    name='osqa-context',
     version='0.1',
     description='',
-    keywords='oauth2.0 port for django tastypie',
+    keywords='osqa question answering context',
     license='GNU LESSER GENERAL PUBLIC LICENSE',
+    zip_safe=False,
     author='Adam Gibson',
-    author_email='andy@mrox.net',
+    author_email='agibson@clevercloudcomputing.com',
     maintainer='Jacob Northey',
     maintainer_email='support@lasalletech.com',
     url='',
@@ -51,5 +52,4 @@ setup(
     ],
     
      install_requires=['django-tastypie>=0.9.11'],
-  
 )
