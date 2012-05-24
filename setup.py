@@ -28,7 +28,7 @@ for dirpath, dirnames, filenames in os.walk(package_dir):
         packages.append(".".join(fullsplit(dirpath)))
  
 setup(
-    name='osqa-context',
+    name='django-tastypie-two-legged-oauth',
     version='0.1',
     description='',
     keywords='osqa question answering context',
